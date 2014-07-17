@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".StepDetectorActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/start_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:text="Stop" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="18dp"
+            android:text="Port:"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/stop_button"
+            android:layout_centerHorizontal="true"
+            android:text="Start" />
+
+        <TextView
+            android:id="@+id/serverPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/serverIp"
+            android:layout_alignTop="@+id/TextView01"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/serverIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TextView01"
+            android:layout_marginLeft="46dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="47dp"
+            android:text="Server IP:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/myStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/serverPort"
+            android:layout_centerVertical="true"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/stepCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/myStep"
+            android:layout_alignBottom="@+id/myStep"
+            android:layout_alignRight="@+id/textView1"
+            android:layout_marginRight="16dp"
+            android:text="My Steps: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
